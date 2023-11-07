@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <h1>Bulletin Board</h1>
+  </div>
+  <div class="navbar-links">
+    <a *ngIf="!isLoggedIn" routerLink="/login">Login</a>
+    <a *ngIf="!isLoggedIn" routerLink="/signup">Sign Up</a>
+    <a *ngIf="isLoggedIn" (click)="homePage()">Home</a>
+    <a *ngIf="isLoggedIn" (click)="addPost()">Add Post</a>
+    <a *ngIf="isLoggedIn" (click)="logout()">Logout</a>
+  </div>
+</nav>

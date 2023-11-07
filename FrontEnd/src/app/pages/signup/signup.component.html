@@ -1,0 +1,64 @@
+<div class="signup-container">
+  <div class="signup-form">
+    <h2>Sign Up</h2>
+    <form (submit)="onSubmit($event)" #signUpForm="ngForm">
+      <!-- Form fields go here (as in your provided HTML) -->
+      <div class="form-group" [class.error]="username.invalid && username.touched">
+        <label for="username">Username</label>
+        <input type="text" id="Username" name="username" [formControl]="username" required>
+        <i class="fa fa-check" *ngIf="isUsernameValid"></i>
+        <div *ngIf="username.invalid && username.touched" class="error-message">
+          Username is required and must be between 4 and 30 characters.
+        </div>
+      </div>
+
+      <div class="form-group" [class.error]="firstName.invalid && firstName.touched">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" [formControl]="firstName" required>
+        <i class="fa fa-check" *ngIf="isFirstNameValid"></i>
+        <div *ngIf="firstName.invalid && firstName.touched" class="error-message">
+          Firstname is required and must be a maximum of 30 characters with no special characters or numbers.
+        </div>
+      </div>
+
+      <div class="form-group" [class.error]="lastName.invalid && lastName.touched">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" [formControl]="lastName" required>
+        <i class="fa fa-check" *ngIf="isLastNameValid"></i>
+        <div *ngIf="lastName.invalid && lastName.touched" class="error-message">
+          Lastname is required and must be a maximum of 30 characters with no special characters or numbers.
+        </div>
+      </div>
+
+      <div class="form-group" [class.error]="age.invalid && age.touched">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" [formControl]="age" required>
+        <i class="fa fa-check" *ngIf="isAgeValid"></i>
+        <div *ngIf="age.invalid && age.touched" class="error-message">
+          Age is required and must be between 16 and 99 with no characters or special characters.
+        </div>
+      </div>
+
+      <div class="form-group" [class.error]="password.invalid && password.touched">
+        <label for="password">Password</label>
+        <input type="password" id="Password" name="password" [formControl]="password" required>
+        <i class="fa fa-check" *ngIf="isPasswordValid"></i>
+        <div *ngIf="password.invalid && password.touched" class="error-message">
+          Password is required and must be between 4 and 30 characters.
+        </div>
+      </div>
+  
+      <div class="form-group" [class.error]="confirmPassword.invalid && confirmPassword.touched">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" [formControl]="confirmPassword" required>
+        <i class="fa fa-check" *ngIf="isConfirmPasswordValid"></i>
+        <div *ngIf="password.invalid && password.touched" class="error-message">
+          Confirm Password is required and must be between 4 and 30 characters.
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="signUpForm.invalid">Sign-Up</button>
+    </form>
+    <div class="error-message" *ngIf="hasError">{{ errorMessage }}</div>
+  </div>
+</div>

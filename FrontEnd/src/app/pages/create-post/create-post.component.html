@@ -1,0 +1,35 @@
+<div class="add-post-container">
+    <h2>Add Post</h2>
+
+    <form (submit)="addNewPost($event)" #postForm="ngForm">
+      <div class="form-group" [class.error]="title.invalid && title.touched">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" [formControl]="title" required>
+        <i class="fa fa-check" *ngIf="isTitleValid"></i>
+        <div *ngIf="title.invalid && title.touched" class="error-message">
+          Title is required and must be between 4 and 30 characters with no special characters or numbers.
+        </div>
+     </div>
+
+      <div class="form-group" [class.error]="description.invalid && description.touched">
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" [formControl]="description" required>
+        <i class="fa fa-check" *ngIf="isDescriptionValid"></i>
+        <div *ngIf="description.invalid && description.touched" class="error-message">
+          Description is required and must be between 4 and 150 characters with no special characters or numbers.
+        </div>
+      </div>
+    
+       <div class="form-group" [class.error]="department.invalid && department.touched">
+         <label for="department">Department</label>
+         <input type="text" id="department" name="department" [formControl]="department" required>
+         <i class="fa fa-check" *ngIf="isDepartmentValid"></i>
+         <div *ngIf="department.invalid && department.touched" class="error-message">
+          Department is required and must be between 4 and 20 characters with no special characters or numbers.
+        </div>
+       </div>
+
+      <button type="submit" [disabled]="postForm.invalid">Add Post</button>
+      <div class="error-message" *ngIf="hasError">{{ errorMessage }}</div>
+    </form>
+  </div>

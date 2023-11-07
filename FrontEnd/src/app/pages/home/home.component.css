@@ -1,0 +1,57 @@
+/* Update the CSS for the table */
+.form-group {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Add some spacing and padding for better readability */
+.table-container {
+  padding: 20px;
+}
+
+/* Add a hover effect on table rows */
+tr:hover {
+  background-color: #4ADEDE;
+  color: black;
+}
+
+/* Style the delete button */
+.delete-button {
+  background-color: #FF0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #CC0000;
+}
+
+.error-message {
+  color: red; /* Set the text color to red */
+}

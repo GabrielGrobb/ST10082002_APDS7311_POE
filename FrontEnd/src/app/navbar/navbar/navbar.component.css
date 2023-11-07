@@ -1,0 +1,29 @@
+/* navbar.component.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* Set your desired background color */
+  color: white; /* Text color */
+  padding: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: 2px solid #007BFF; /* Border color for buttons */
+  border-radius: 25px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+
+  /* Modern design with a slight shadow and hover effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a:hover {
+  background-color: #007BFF; /* Background color on hover */
+  color: white; /* Text color on hover */
+  border-color: #0056b3; /* Border color on hover */
+}

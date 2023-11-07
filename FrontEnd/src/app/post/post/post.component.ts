@@ -1,0 +1,21 @@
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
+@Component({
+  selector: 'app-post',
+  templateUrl: './post.component.html',
+})
+export class PostComponent implements OnInit {
+  @Input ('id') id ='';
+  @Input ('title') title ='';
+  @Input ('description') description = '';
+  @Input ('department') department='';
+  @Output() delete = new EventEmitter()
+
+  constructor(){}
+
+  ngOnInit(): void {}
+
+  onClick(){
+    this.delete.emit();
+  }
+}

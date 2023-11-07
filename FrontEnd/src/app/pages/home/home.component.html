@@ -1,0 +1,27 @@
+<div class="flex-container">
+  <div class="table-container">
+    <div class="error-message" *ngIf="hasError">{{ errorMessage }}</div>
+
+    <!-- Table to display the list of posts -->
+    <table class="posts-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Department</th>
+          <th>Description</th>
+          <th>Action</th> <!-- Add a new column for the delete button -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of posts" class="post-row">
+          <td>{{ post.title }}</td>
+          <td>{{ post.department }}</td>
+          <td>{{ post.description }}</td>
+          <td>
+            <button class="delete-button" (click)="deletePost(post._id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

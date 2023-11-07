@@ -1,0 +1,49 @@
+.form-group {
+    margin-bottom: 20px;
+  }
+  
+  .add-post-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .add-post-container form {
+    display: block;
+  }
+  
+  .add-post-container label {
+    display: block;
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  .add-post-container input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .add-post-container button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .add-post-container button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+.error-message {
+    color: red; /* Set the text color to red */
+  }
